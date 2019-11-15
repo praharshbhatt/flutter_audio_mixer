@@ -273,11 +273,12 @@ class _AudioMixerState extends State<AudioMixer> {
                   color: Colors.white,
                   padding: EdgeInsets.all(2),
                   width: MediaQuery.of(context).size.width * 0.2,
-                  height: 100,
+                  height: 150,
                   child: TextFormField(
                     style: TextStyle(fontSize: 20),
                     maxLines: 10,
                     decoration: InputDecoration(
+                        hintText: "Type here your Notes",
                         border: OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.blueGrey, width: 10), gapPadding: 0),
                         fillColor: Colors.white,
