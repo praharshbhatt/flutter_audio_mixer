@@ -18,3 +18,11 @@ flutter:
 
   assets:
     - assets/images/
+
+
+
+  #Fonts
+  fonts:
+    - family: LED
+      fonts:
+        - asset: fonts/digital-counter-7.regular.ttf

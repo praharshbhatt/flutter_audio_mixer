@@ -152,11 +152,12 @@ class _GetVerticalSliderState extends State<GetVerticalSlider> {
   //Mixer Slider
   getFlutterSlider() {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.8 - 200,
+      height: MediaQuery.of(context).size.height * 0.8,
+//      height: 200,
       child: FlutterSlider(
         axis: Axis.vertical,
         values: [_sliderValue],
-        max: 500,
+        max: 100,
         min: 0,
         rangeSlider: false,
         rtl: true,
@@ -184,11 +185,11 @@ class _GetVerticalSliderState extends State<GetVerticalSlider> {
           ),
           activeTrackBar: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
-              color: (_sliderValue / 5) <= 40
+              color: (_sliderValue / 1) <= 40
                   ? Colors.black.withOpacity(0.5)
-                  : ((_sliderValue / 5) > 40 && (_sliderValue / 5) <= 60)
+                  : ((_sliderValue / 1) > 40 && (_sliderValue / 1) <= 60)
                       ? Colors.green.withOpacity(0.5)
-                      : ((_sliderValue / 5) > 60 && (_sliderValue / 5) <= 80)
+                      : ((_sliderValue / 1) > 60 && (_sliderValue / 1) <= 80)
                           ? Colors.yellow.withOpacity(0.5)
                           : Colors.red.withOpacity(0.5)),
         ),
@@ -216,7 +217,15 @@ class _GetVerticalSliderState extends State<GetVerticalSlider> {
           setState(() {
             _sliderValue = lowerValue;
           });
-          print("Slider value: " + _sliderValue.toString() + ", " + (_sliderValue / 5).toString() + "%");
+          print("Slider value: " + _sliderValue.toString() + ", " + (_sliderValue / 1).toString() + "%");
+          onDragging(lowerValue);
+        },
+
+        onDragCompleted: (handlerIndex, lowerValue, upperValue) {
+          setState(() {
+            _sliderValue = lowerValue;
+          });
+          print("Slider value: " + _sliderValue.toString() + ", " + (_sliderValue / 1).toString() + "%");
           onDragging(lowerValue);
         },
       ),
