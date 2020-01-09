@@ -46,7 +46,6 @@ class _AudioMixerState extends State<AudioMixer> {
   getMainMixerPanel() {
     return Container(
       height: (MediaQuery.of(context).size.height < 600) ? 600 : MediaQuery.of(context).size.height + 100,
-//      height: MediaQuery.of(context).size.height + 100,
       width: MediaQuery.of(context).size.width * 0.8,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -175,7 +174,6 @@ class _AudioMixerState extends State<AudioMixer> {
     return Container(
         width: MediaQuery.of(context).size.width * 0.2,
         height: (MediaQuery.of(context).size.height < 600) ? 600 : MediaQuery.of(context).size.height + 100,
-//        height: MediaQuery.of(context).size.height + 100,
         color: Colors.grey.withOpacity(0.7),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -339,7 +337,6 @@ class _AudioMixerState extends State<AudioMixer> {
                   color: Colors.white,
                   padding: EdgeInsets.all(5),
                   width: MediaQuery.of(context).size.width,
-//                height: 50,
                   child: TextFormField(
                     style: TextStyle(
                       fontSize: MediaQuery.of(context).size.width * 0.015,

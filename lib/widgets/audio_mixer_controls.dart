@@ -153,7 +153,6 @@ class _GetVerticalSliderState extends State<GetVerticalSlider> {
   getFlutterSlider() {
     return Container(
       height: MediaQuery.of(context).size.height * 0.8,
-//      height: 200,
       child: FlutterSlider(
         axis: Axis.vertical,
         values: [_sliderValue],
@@ -204,11 +203,11 @@ class _GetVerticalSliderState extends State<GetVerticalSlider> {
             density: 0.5, // means 50 lines, from 0 to 100 percent
             labels: List.generate(11, (index) {
               if (index == 0) {
-                return FlutterSliderHatchMarkLabel(percent: 0, label: 'Closed');
+                return FlutterSliderHatchMarkLabel(percent: 0, label: Text("Closed"));
               } else if (index == 10) {
-                return FlutterSliderHatchMarkLabel(percent: 100, label: 'Max');
+                return FlutterSliderHatchMarkLabel(percent: 100, label: Text("Max"));
               } else {
-                return FlutterSliderHatchMarkLabel(percent: index * 10.0, label: (index * 10).toString() + ' %');
+                return FlutterSliderHatchMarkLabel(percent: index * 10.0, label: Text((index * 10).toString() + ' %'));
               }
             })),
 
@@ -217,7 +216,7 @@ class _GetVerticalSliderState extends State<GetVerticalSlider> {
           setState(() {
             _sliderValue = lowerValue;
           });
-          print("Slider value: " + _sliderValue.toString() + ", " + (_sliderValue / 1).toString() + "%");
+//          print("Slider value: " + _sliderValue.toString() + ", " + (_sliderValue / 1).toString() + "%");
           onDragging(lowerValue);
         },
 
@@ -225,7 +224,7 @@ class _GetVerticalSliderState extends State<GetVerticalSlider> {
           setState(() {
             _sliderValue = lowerValue;
           });
-          print("Slider value: " + _sliderValue.toString() + ", " + (_sliderValue / 1).toString() + "%");
+//          print("Slider value: " + _sliderValue.toString() + ", " + (_sliderValue / 1).toString() + "%");
           onDragging(lowerValue);
         },
       ),
